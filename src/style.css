@@ -12,7 +12,7 @@ html {
   height: 100%;
 }
 
-.carta {
+.card {
   padding: 10px;
   width: 150px;
   height: 220px;
@@ -27,8 +27,8 @@ html {
   position: relative;
 }
 
-.valor-superior,
-.valor-inferior {
+.number-superior,
+.number-inferior {
   width: 100%;
   height: 40px;
   display: flex;
@@ -38,14 +38,14 @@ html {
   font-size: 24px;
 }
 
-.valor {
+.number {
   color: black;
 }
 
-.palo {
+.suit {
   color: red;
 }
 
-.valor-inferior {
+.number-inferior {
   transform: rotate(180deg);
 }

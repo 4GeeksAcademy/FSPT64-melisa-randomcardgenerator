@@ -1,6 +1,6 @@
-const generarCarta = () => {
-    const palos = ["♠", "♥", "♦", "♣"];
-    const valores = [
+const cardGenerator = () => {
+    const suits = ["♠", "♥", "♦", "♣"];
+    const numbers = [
       "2",
       "3",
       "4",
@@ -15,26 +15,26 @@ const generarCarta = () => {
       "K",
       "A"
     ];
-    const paloAleatorio = palos[Math.floor(Math.random() * palos.length)];
-    const valorAleatorio = valores[Math.floor(Math.random() * valores.length)];
+    const randomSuits = suits[Math.floor(Math.random() * suits.length)];
+    const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
     return {
-      palo: paloAleatorio,
-      valor: valorAleatorio
+      suit: randomSuits,
+      number: randomNumber
     };
   };
   
-  const actualizarCarta = () => {
-    const nuevaCarta = generarCarta();
-    const cartaElemento = document.getElementById("carta");
+  const NewUpdateCard = () => {
+    const newCard = cardGenerator();
+    const elementCard = document.getElementById("card");
   
-    const valores = cartaElemento.querySelectorAll(".valor");
-    valores.forEach(
-      valorElemento => (valorElemento.textContent = nuevaCarta.valor)
+    const numbers = elementCard.querySelectorAll(".number");
+    numbers.forEach(
+      elementNumber => (elementNumber.textContent = newCard.number)
     );
   
-    const palos = cartaElemento.querySelectorAll(".palo");
-    palos.forEach(paloElemento => (paloElemento.textContent = nuevaCarta.palo));
+    const suits = elementCard.querySelectorAll(".suit");
+    suits.forEach(elementSuit => (elementSuit.textContent = newCard.suit));
   };
   
-  actualizarCarta();
+  NewUpdateCard();
   
